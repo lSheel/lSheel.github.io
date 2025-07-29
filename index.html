@@ -14,6 +14,12 @@
             window.location.href = webURL;
         }, 1500);
         window.location = appURL;
+
+        document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'hidden') {
+                clearTimeout(fallbackTimer);
+            }
+        });
     </script>
 </head>
 
