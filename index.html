@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const phone = params.get("phone");
+
+        const appURL = 'whatsapp://send?phone=' + phone
+        const webURL = 'https://wa.me/' + phone
+
+        setTimeout(() => {
+            window.location.href = webURL;
+        }, 1500);
+        window.location = appURL;
+    </script>
+</head>
+
+<body></body>
+
+</html>
