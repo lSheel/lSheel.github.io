@@ -10,9 +10,9 @@
         const appURL = 'whatsapp://send?phone=' + phone
         const webURL = 'https://web.whatsapp.com/send?phone=' + phone
 
-        setTimeout(() => {
+        let fallbackTimer = setTimeout(() => {
             window.location.href = webURL;
-        }, 5000);
+        }, 4000);
         window.location = appURL;
 
         document.addEventListener('visibilitychange', function () {
